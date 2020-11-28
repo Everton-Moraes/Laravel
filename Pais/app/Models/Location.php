@@ -12,3 +12,4 @@ class Location extends Model
         return $this->belongsTo(Country::class);
     }
 
+}

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Cadastro;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,39 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('index');
+Route::get('/cadastropais', function(){
+    return view('cadastro_country');
+})->name('cadastro.pais');
+
+
+Route::post('/cadastropais', [Cadastro::class,'cadastroPais'])->name('pais.cadastrado');
+
+Route::get('/cadastrolocalizacao', function(){
+    return view('cadastro_location');
+})->name('cadastro.localizacao');
+
+Route::get('/cadastroestado', function(){
+    return view('cadastro_state');
+})->name('cadastro.estado');
+
+Route::get('/cadastrocidade', function(){
+    return view('cadastro_city');
+})->name('cadastro.cidade');
+
+Route::get('/buscapais', function(){
+    return view('busca_country');
+})->name('busca.pais');
+
+Route::get('/buscaestado', function(){
+    return view('busca_state');
+})->name('busca.estado');
+
+Route::get('/buscacidade', function(){
+    return view('busca_city');
+})->name('busca.cidade');
+
+Route::get('/buscalocalizacao', function(){
+    return view('busca_location');
+})->name('busca.localizacao');
