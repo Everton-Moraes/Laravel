@@ -24,9 +24,7 @@ Route::get('/cadastropais', function(){
 
 Route::post('/cadastropais', [Cadastro::class,'cadastroPais'])->name('pais.cadastrado');
 
-Route::get('/cadastrolocalizacao', function(){
-    return view('cadastro.cadastro_location');
-})->name('cadastro.localizacao');
+Route::get('/cadastrolocalizacao', [Cadastro::class,'buscaPaises'])->name('cadastro.localizacao');
 
 Route::get('/cadastroestado', function(){
     return view('cadastro.cadastro_state');
