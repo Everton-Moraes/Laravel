@@ -18,36 +18,36 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 Route::get('/cadastropais', function(){
-    return view('cadastro_country');
+    return view('cadastro.cadastro_country');
 })->name('cadastro.pais');
 
 
 Route::post('/cadastropais', [Cadastro::class,'cadastroPais'])->name('pais.cadastrado');
 
 Route::get('/cadastrolocalizacao', function(){
-    return view('cadastro_location');
+    return view('cadastro.cadastro_location');
 })->name('cadastro.localizacao');
 
 Route::get('/cadastroestado', function(){
-    return view('cadastro_state');
+    return view('cadastro.cadastro_state');
 })->name('cadastro.estado');
 
 Route::get('/cadastrocidade', function(){
-    return view('cadastro_city');
+    return view('cadastro.cadastro_city');
 })->name('cadastro.cidade');
 
 Route::get('/buscapais', function(){
-    return view('busca_country');
+    return view('busca.busca_country');
 })->name('busca.pais');
 
 Route::get('/buscaestado', function(){
-    return view('busca_state');
+    return view('busca.busca_state');
 })->name('busca.estado');
 
 Route::get('/buscacidade', function(){
-    return view('busca_city');
+    return view('busca.busca_city');
 })->name('busca.cidade');
 
 Route::get('/buscalocalizacao', function(){
-    return view('busca_location');
+    return view('busca.busca_location');
 })->name('busca.localizacao');
