@@ -10,37 +10,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Buscar País</title>
+    <title>Erro de Busca</title>
 </head>
 <body>
-
-    <form class="form-horizontal" action="{{route('pais.buscado')}}" method="POST">
-      @csrf
-        <fieldset>
-        
-        <!-- Form Name -->
-        <legend>Busca de País</legend>
-        
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="nome">País</label>  
-          <div class="col-md-4">
-          <input id="nome" name="nome" type="text" placeholder="Digite um País:" class="form-control input-md">
-            
-          </div>
-        </div>
-        
-        <!-- Button -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="nome"></label>
-          <div class="col-md-4">
-            <button type="submit" id="button" name="button" class="btn btn-primary">Buscar</button>
-            <button type="button" id="button2" name="button2" onclick="window.location='{{route('index')}}'" class="btn btn-danger">Voltar</button>
-          </div>
-        </div>
-        
-        </fieldset>
-        </form>
+    
+    <h2>Item não encontrado</h2>
+    <button type="button" id="button2" name="button2" onclick="window.location='{{route('index')}}'" class="btn btn-danger">Voltar</button>
+          
     
 </body>
 </html>

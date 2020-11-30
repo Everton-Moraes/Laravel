@@ -36,6 +36,7 @@ Route::post('/cadastrocidade', [Cadastro::class,'cadastroCidade'])->name('cidade
 Route::get('/buscapais', function(){
     return view('busca.busca_country');
 })->name('busca.pais');
+Route::post('/buscapais', [Busca::class, 'buscaPorPais'])->name('pais.buscado');
 
 Route::get('/buscaestado', function(){
     return view('busca.busca_state');
@@ -48,3 +49,4 @@ Route::get('/buscacidade', function(){
 Route::get('/buscalocalizacao', function(){
     return view('busca.busca_location');
 })->name('busca.localizacao');
+
