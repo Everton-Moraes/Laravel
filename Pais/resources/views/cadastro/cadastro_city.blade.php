@@ -25,7 +25,7 @@
           <label class="col-md-4 control-label" for="state_id">Selecione o Estado</label>
           <div class="col-md-4">
             <select id="state_id" name="state_id" class="form-control">
-              <option value="NULL">Selecione o País</option>
+              <option value="NULL">Selecione o Estado</option>
               @foreach ($estados as $estado)
               <option value={{$estado->id}}>{{$estado->nome}}</option>
               @endforeach
