@@ -13,7 +13,8 @@
 </head>
 <body>
     
-    <form class="form-horizontal" action="" method="POST">
+    <form class="form-horizontal" action="{{route('cidade.cadastrado')}}" method="POST">
+        @csrf
         <fieldset>
         
         <!-- Form Name -->
@@ -24,6 +25,10 @@
           <label class="col-md-4 control-label" for="state_id">Selecione o Estado</label>
           <div class="col-md-4">
             <select id="state_id" name="state_id" class="form-control">
+              <option value="NULL">Selecione o País</option>
+              @foreach ($estados as $estado)
+              <option value={{$estado->id}}>{{$estado->nome}}</option>
+              @endforeach
             </select>
           </div>
         </div>

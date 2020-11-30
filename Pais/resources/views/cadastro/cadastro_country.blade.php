@@ -13,7 +13,7 @@
 </head>
 <body>
     
-    <form class="form-horizontal" action="{{route('pais.cadastrado')}} " method="POST">
+    <form class="form-horizontal" action="{{route('pais.cadastrado')}}" method="POST">
       @csrf  
       <fieldset>
         

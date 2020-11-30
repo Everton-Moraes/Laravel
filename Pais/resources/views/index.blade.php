@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Paises</title>
 </head>
-<body>
+<body background="mapa.png">
 
     <div id="Botoes" class="col">
         <fieldset class="border p-2">
