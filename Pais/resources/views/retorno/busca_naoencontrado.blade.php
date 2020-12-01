@@ -13,10 +13,10 @@
     <title>Erro de Busca</title>
 </head>
 <body>
-    
-    <h2>Item não encontrado</h2>
-    <button type="button" id="button2" name="button2" onclick="window.location='{{route('index')}}'" class="btn btn-danger">Voltar</button>
-          
+    <div style="align-items: center; display: flex;flex-direction: column;justify-content: center">
+        <h2>Item não encontrado</h2><br>
+        <button type="button" id="button2" name="button2" onclick="window.location='{{route('index')}}'" class="btn btn-danger">Voltar</button>
+    </div>      
     
 </body>
 </html>

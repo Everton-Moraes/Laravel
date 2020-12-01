@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Cadastro;
 use App\Http\Controllers\Busca;
+use App\Http\Controllers\Lista;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,12 +42,18 @@ Route::post('/buscapais', [Busca::class, 'buscaPorPais'])->name('pais.buscado');
 Route::get('/buscaestado', function(){
     return view('busca.busca_state');
 })->name('busca.estado');
+Route::post('/buscaestado', [Busca::class, 'buscaPorEstado'])->name('estado.buscado');
+
 
 Route::get('/buscacidade', function(){
     return view('busca.busca_city');
 })->name('busca.cidade');
+Route::post('/buscacidade', [Busca::class, 'buscaPorCidade'])->name('cidade.buscado');
 
 Route::get('/buscalocalizacao', function(){
     return view('busca.busca_location');
 })->name('busca.localizacao');
+Route::post('/buscalocalizacao', [Busca::class, 'buscaPorLocalizacao'])->name('localizacao.buscado');
+
+Route::get('/listapaises/{string}', [Lista::class,'listaPaises'])->name('exibe.paises');
 
