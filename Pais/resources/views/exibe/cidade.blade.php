@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{$pais->nome}}</title>
+    <title>{{$cidade->nome}}</title>
 </head>
 <body background="mapa.png">
 
@@ -17,8 +17,6 @@
         <fieldset class="border p-2">
             <legend class="w-auto">País</legend>
             <h4>{{$pais->nome}}</h4>
-            <h5>Latitude: {{$localizacao->latitude}}</h5>
-            <h5>Longitude: {{$localizacao->longitude}}</h5>
         </fieldset>
         <br>
         <fieldset class="border p-2">
@@ -28,8 +26,10 @@
         <br>
         <fieldset class="border p-2">
             <legend class="w-auto">Cidade</legend>
-                <h5>{{$cidade->nome}}              
-            </fieldset>
+                <h5>{{$cidade->nome}}</h5>
+                <button type="button" id="button2" name="button2" onclick="window.location='{{route('edita.cidade', ['id'=>$cidade->id])}}'" class="btn btn-warning">Editar</button>
+                <button type="button" id="button2" name="button2" onclick="window.location='{{route('exclui.cidade',['id'=>$cidade->id])}}'" class="btn btn-danger">Excluir</button>              
+        </fieldset>
         <br>
         <button type="button" id="button2" name="button2" onclick="window.location='{{route('index')}}'" class="btn btn-danger">Voltar</button>
     </div>

@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Cadastro;
 use App\Http\Controllers\Busca;
+use App\Http\Controllers\Edita;
 use App\Http\Controllers\Lista;
+use App\Http\Controllers\Exclui;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,7 @@ Route::get('/buscapais', function(){
 })->name('busca.pais');
 Route::post('/buscapais', [Busca::class, 'buscaPorPais'])->name('pais.buscado');
 
+
 Route::get('/buscaestado', function(){
     return view('busca.busca_state');
 })->name('busca.estado');
@@ -57,3 +60,23 @@ Route::post('/buscalocalizacao', [Busca::class, 'buscaPorLocalizacao'])->name('l
 
 Route::get('/listapaises/{string}', [Lista::class,'listaPaises'])->name('exibe.paises');
 
+Route::get('/editapais/{id}', [Edita::class, 'editaPais'])->name('edita.pais');
+Route::post('/editapais/{id}', [Edita::class, 'updatePais'])->name('pais.editado');
+
+Route::get('/editaestado/{id}', [Edita::class, 'editaEstado'])->name('edita.estado');
+Route::post('/editaestado/{id}', [Edita::class, 'updateEstado'])->name('estado.editado');
+
+Route::get('/editacidade/{id}', [Edita::class, 'editaCidade'])->name('edita.cidade');
+Route::post('/editacidade/{id}', [Edita::class, 'updateCidade'])->name('cidade.editado');
+
+Route::get('/excluipais/{id}', [Exclui::class, 'excluiPais'])->name('exclui.pais');
+Route::post('/excluipais/{id}', [Exclui::class, 'deletePais'])->name('pais.excluido');
+
+Route::get('/excluilocalizacao/{id}', [Exclui::class, 'excluiLocalizacao'])->name('exclui.localizacao');
+Route::post('/excluilocalizacao/{id}', [Exclui::class, 'deleteLocalizacao'])->name('localizacao.excluido');
+
+Route::get('/excluiestado/{id}', [Exclui::class, 'excluiEstado'])->name('exclui.estado');
+Route::post('/excluiestado/{id}', [Exclui::class, 'deleteEstado'])->name('estado.excluido');
+
+Route::get('/excluicidade/{id}', [Exclui::class, 'excluiCidade'])->name('exclui.cidade');
+Route::post('/excluicidade/{id}', [Exclui::class, 'deleteCidade'])->name('cidade.excluido');

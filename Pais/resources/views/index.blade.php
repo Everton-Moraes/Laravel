@@ -44,26 +44,6 @@
             <button id='btn12' type="button" onclick="window.location='{{route('exibe.paises', ['string'=>'4'])}}'" class="btn btn-info">Cidades</button>
         </fieldset>
     </div>  
-    <br>
-    <br>
-    <div id="Butons" class="col">
-        <fieldset class="border p-2">
-            <legend class="w-auto">Editar</legend>
-            <button id='btn13' type="button" onclick="window.location='{{route('busca.pais')}}'" class="btn btn-warning">País</button>
-            <button id='btn14' type="button" onclick="window.location='{{route('busca.localizacao')}}'" class="btn btn-warning">Localização</button>
-            <button id='btn15' type="button" onclick="window.location='{{route('busca.estado')}}'" class="btn btn-warning">Estado</button>
-            <button id='btn16' type="button" onclick="window.location='{{route('busca.cidade')}}'" class="btn btn-warning">Cidade</button>
-        </fieldset>
-    </div> 
-    <div id="Butons" class="col">
-        <fieldset class="border p-2">
-            <legend class="w-auto">Excluir</legend>
-            <button id='btn13' type="button" onclick="window.location='{{route('busca.pais')}}'" class="btn btn-danger">País</button>
-            <button id='btn14' type="button" onclick="window.location='{{route('busca.localizacao')}}'" class="btn btn-danger">Localização</button>
-            <button id='btn15' type="button" onclick="window.location='{{route('busca.estado')}}'" class="btn btn-danger">Estado</button>
-            <button id='btn16' type="button" onclick="window.location='{{route('busca.cidade')}}'" class="btn btn-danger">Cidade</button>
-        </fieldset>
-    </div> 
-        
+            
 </body>
 </html>

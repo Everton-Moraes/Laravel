@@ -27,9 +27,14 @@
                     <h5>Longitude: {{$item->longitude}}</h5>
                     <br>
                 @endforeach
+            @elseif($id == 3)
+                @foreach ($itens as $item)
+                    <h5>{{$item->nome}} - {{$item->iniciais}}</h5>
+                    <br>
+                @endforeach
             @else
                 @foreach ($itens as $item)
-                    <h5>{{$item->nome}}
+                    <h5>{{$item->nome}}</h5>
                     <br>
                 @endforeach
             @endif

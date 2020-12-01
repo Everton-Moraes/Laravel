@@ -76,8 +76,7 @@ class Busca extends Controller
                 $estado = State::where('nome', $request->get('nome'))->get()->first();
                 $cidades = $estado->cities;
                 $pais = $estado->country;
-                $localizacao = $pais->location;
-                return view('exibe.estado',['localizacao'=> $localizacao, 'pais'=> $pais, 'estado'=>$estado, 'cidades'=>$cidades]);
+                return view('exibe.estado',['pais'=> $pais, 'estado'=>$estado, 'cidades'=>$cidades]);
             }
         }catch(Exception $e) {
             return view('retorno.erro', ['erro'=>$e]);
@@ -92,8 +91,7 @@ class Busca extends Controller
                 $cidade = City::where('nome', $request->get('nome'))->get()->first();
                 $estado = $cidade->state;
                 $pais = $estado->country;
-                $localizacao = $pais->location;
-                return view('exibe.cidade',['localizacao'=> $localizacao, 'pais'=> $pais, 'estado'=>$estado, 'cidade'=>$cidade]);
+                return view('exibe.cidade',['pais'=> $pais, 'estado'=>$estado, 'cidade'=>$cidade]);
             }
         }catch(Exception $e) {
             return view('retorno.erro', ['erro'=>$e]);
