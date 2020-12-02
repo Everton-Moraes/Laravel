@@ -25,7 +25,7 @@ class Busca extends Controller
             $paises = Country::all();
             return view("cadastro.cadastro_state")->with('paises', $paises);
         }catch(Exception $e) {
-        return view('retorno.erro', ['erro'=>$e]);
+            return view('retorno.erro', ['erro'=>$e]);
         } 
     }
 
