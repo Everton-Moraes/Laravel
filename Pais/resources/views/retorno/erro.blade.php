@@ -13,9 +13,17 @@
     <title>Erro de Cadastro</title>
 </head>
 <body>
-    
-    <h2>Não foi possível cadastrar</h2>
-    <button type="button" id="button2" name="button2" onclick="window.location='{{route('index')}}'" class="btn btn-danger">Voltar</button>
+    <div style="align-items: center; display: flex;flex-direction: column;justify-content: center">
+        <h2>Não foi possível cadastrar</h2><br>
+        <button type="button" id="button2" name="button2" onclick="window.location='{{route('index')}}'" class="btn btn-danger">Voltar</button>
+    </div>
+    <br>
+    <br>
+    <fieldset class="border p-2">
+        <legend class="w-auto">Motivo</legend>
+        <textarea id="erro" name="erro" rows="10"  style="width: 100%">
+            {{$erro}}
+    </fieldset>
           
     
 </body>

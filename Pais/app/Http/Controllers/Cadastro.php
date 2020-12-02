@@ -23,7 +23,7 @@ class Cadastro extends Controller {
             }
             
         }catch(Exception $e) {
-            return view('retorno.erro');
+            return view('retorno.erro', ['erro'=>$e]);
         }
 
     }
@@ -43,7 +43,7 @@ class Cadastro extends Controller {
             }
             
         }catch(Exception $e) {
-            return view('retorno.erro');
+            return view('retorno.erro', ['erro'=>$e]);
         }    
     }
 
@@ -61,7 +61,7 @@ class Cadastro extends Controller {
             }
             
         }catch(Exception $e) {
-            return view('retorno.erro');
+            return view('retorno.erro', ['erro'=>$e]);
         }    
     }
 
@@ -78,7 +78,7 @@ class Cadastro extends Controller {
             }
             
         }catch(Exception $e) {
-            return view('retorno.erro');
+            return view('retorno.erro', ['erro'=>$e]);
         }    
     }
 

@@ -15,7 +15,7 @@
 
     <div id="Botoes" class="col">
         <fieldset class="border p-2">
-        <legend class="w-auto">Cadastro</legend>
+        <legend class="w-auto">Cadastrar</legend>
             <button id='btn1' type="button" onclick="window.location='{{route('cadastro.pais')}}'" class="btn btn-primary">Cadastrar País</button>
             <button id='btn2' type="button" onclick="window.location='{{route('cadastro.localizacao')}}'" class="btn btn-primary">Cadastrar Localização</button>
             <button id='btn3' type="button" onclick="window.location='{{route('cadastro.estado')}}'" class="btn btn-primary">Cadastrar Estado</button>
@@ -26,13 +26,24 @@
     <br>
     <div id="Butons" class="col">
         <fieldset class="border p-2">
-        <legend class="w-auto">Busca</legend>
+        <legend class="w-auto">Buscar</legend>
             <button id='btn5' type="button" onclick="window.location='{{route('busca.pais')}}'" class="btn btn-success">Buscar País</button>
             <button id='btn6' type="button" onclick="window.location='{{route('busca.localizacao')}}'" class="btn btn-success">Buscar Localização</button>
             <button id='btn7' type="button" onclick="window.location='{{route('busca.estado')}}'" class="btn btn-success">Buscar Estado</button>
             <button id='btn8' type="button" onclick="window.location='{{route('busca.cidade')}}'" class="btn btn-success">Buscar Cidade</button>
         </fieldset>
-    </div>    
-        
+    </div>
+    <br>
+    <br>
+    <div id="Butons" class="col">
+        <fieldset class="border p-2">
+        <legend class="w-auto">Listar</legend>
+            <button id='btn9' type="button" onclick="window.location='{{route('exibe.paises', ['string'=>'1'])}}'" class="btn btn-info">Países</button>
+            <button id='btn10' type="button" onclick="window.location='{{route('exibe.paises', ['string'=>'2'])}}'" class="btn btn-info">Localizações</button>
+            <button id='btn11' type="button" onclick="window.location='{{route('exibe.paises', ['string'=>'3'])}}'" class="btn btn-info">Estados</button>
+            <button id='btn12' type="button" onclick="window.location='{{route('exibe.paises', ['string'=>'4'])}}'" class="btn btn-info">Cidades</button>
+        </fieldset>
+    </div>  
+            
 </body>
 </html>

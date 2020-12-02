@@ -14,7 +14,8 @@
 </head>
 <body>
 
-    <form class="form-horizontal" action="" method="POST">
+    <form class="form-horizontal" action="{{route('localizacao.buscado')}}" method="POST">
+        @csrf
         <fieldset>
         
         <!-- Form Name -->
@@ -24,7 +25,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="nome">Latitude</label>  
           <div class="col-md-4">
-          <input id="nome" name="nome" type="text" placeholder="Digite uma latitude:" class="form-control input-md">
+          <input id="latitude" name="latitude" type="text" placeholder="Digite uma latitude:" class="form-control input-md">
             
           </div>
         </div>
@@ -32,7 +33,7 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="nome">Longitude</label>  
             <div class="col-md-4">
-            <input id="nome" name="nome" type="text" placeholder="Digite uma longitude:" class="form-control input-md">
+            <input id="longitude" name="longitude" type="text" placeholder="Digite uma longitude:" class="form-control input-md">
               
             </div>
           </div>
