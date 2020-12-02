@@ -31,7 +31,8 @@ class Cadastro extends Controller {
     public function cadastroLocalizacao(Request $request){
         
         try{
-            if(Location::where('country_id', $request->get('country_id'))->count() == 0){
+            $localizacao=Location::where('latitude', $request->get('latitude'))->where('longitude', $request->get('longitude'));
+            if(Location::where('country_id', $request->get('country_id'))->count() == 0 && $localizacao->count() == 0){
                 Location::create([
                     'country_id'=> $request->country_id,
                     'latitude'=> $request->latitude,

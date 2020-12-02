@@ -16,12 +16,23 @@
     <div id="exibe-pais" class="col">
         <fieldset class="border p-2">
             <legend class="w-auto">País</legend>
-            <h4>{{$pais->nome}}</h4>
-            <h5>Latitude: {{$localizacao->latitude}}</h5>
-            <h5>Longitude: {{$localizacao->longitude}}</h5>
-            <button type="button" id="button1" name="button1" onclick="window.location='{{route('edita.pais', ['id'=>$pais->id])}}'" class="btn btn-warning">Editar</button>
-            <button type="button" id="button2" name="button2" onclick="window.location='{{route('exclui.pais',['id'=>$pais->id])}}'" class="btn btn-danger">Excluir País</button>
-            <button type="button" id="button3" name="button3" onclick="window.location='{{route('exclui.localizacao',['id'=>$localizacao->id])}}'" class="btn btn-danger">Excluir Localização</button>
+            @if ($localizacao==NULL)
+                <h4>{{$pais->nome}}</h4>
+                <h5>Latitude: Não Cadastrado</h5>
+                <h5>Longitude: Não Cadastrado</h5>
+                <button type="button" id="button1" name="button1" onclick="window.location='{{route('edita.pais', ['id'=>$pais->id])}}'" class="btn btn-warning">Editar</button>
+                <button type="button" id="button2" name="button2" onclick="window.location='{{route('exclui.pais',['id'=>$pais->id])}}'" class="btn btn-danger">Excluir País</button>
+                
+                
+            @else
+                <h4>{{$pais->nome}}</h4>
+                <h5>Latitude: {{$localizacao->latitude}}</h5>
+                <h5>Longitude: {{$localizacao->longitude}}</h5>
+                <button type="button" id="button1" name="button1" onclick="window.location='{{route('edita.pais', ['id'=>$pais->id])}}'" class="btn btn-warning">Editar</button>
+                <button type="button" id="button2" name="button2" onclick="window.location='{{route('exclui.pais',['id'=>$pais->id])}}'" class="btn btn-danger">Excluir País</button>
+                <button type="button" id="button3" name="button3" onclick="window.location='{{route('exclui.localizacao',['id'=>$localizacao->id])}}'" class="btn btn-danger">Excluir Localização</button>
+                            
+            @endif
         </fieldset>
         <br>
         <fieldset class="border p-2">

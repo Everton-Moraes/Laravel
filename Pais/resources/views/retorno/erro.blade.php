@@ -19,11 +19,13 @@
     </div>
     <br>
     <br>
-    <fieldset class="border p-2">
-        <legend class="w-auto">Motivo</legend>
-        <textarea id="erro" name="erro" rows="10"  style="width: 100%">
-            {{$erro}}
-    </fieldset>
+    <div class="col">
+        <fieldset class="border p-2">
+            <legend class="w-auto">Motivo</legend>
+            <textarea id="erro" name="erro" rows="10"  style="width: 100%">
+                {{$erro}}
+        </fieldset>
+    </div>
           
     
 </body>

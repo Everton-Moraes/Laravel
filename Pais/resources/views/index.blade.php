@@ -44,6 +44,14 @@
             <button id='btn12' type="button" onclick="window.location='{{route('exibe.paises', ['string'=>'4'])}}'" class="btn btn-info">Cidades</button>
         </fieldset>
     </div>  
-            
+    
+    <hr>          
+    <footer style="padding-left:20px;background-color:rgb(196, 193, 193)">
+        <strong>Feito por:<br>
+        Antonio Eduardo Kronitzky de Melo<br>
+        Everton Gomes de Moraes<br>
+        Renato José Bonardo</strong>
+    </footer>
+
 </body>
 </html>
